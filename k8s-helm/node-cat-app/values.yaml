@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: fandilladp/node-cat-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -41,7 +41,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 3012
 
 ingress:
   enabled: false
@@ -75,7 +75,7 @@ autoscaling:
   enabled: false
   minReplicas: 1
   maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 20
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.

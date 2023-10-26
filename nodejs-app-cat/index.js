@@ -5,10 +5,10 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 const pool = new Pool({
-  user: "postgres",
-  host: "mydb",
-  database: "postgres",
-  password: "mysecretpassword",
+  user: "myuser",
+  host: "127.0.0.1",
+  database: "mydb",
+  password: "mypassword",
   port: 5432,
 });
 

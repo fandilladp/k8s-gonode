@@ -13,7 +13,7 @@ var db *sql.DB
 
 func main() {
 	var err error
-	db, err = sql.Open("postgres", "host=mydb user=postgres password=mysecretpassword dbname=postgres sslmode=disable")
+	db, err = sql.Open("postgres", "host=127.0.0.1 user=postgres password=mysecretpassword dbname=postgres sslmode=disable")
 	if err != nil {
 		log.Fatalf("Failed to connect to database : %v", err)
 	}
